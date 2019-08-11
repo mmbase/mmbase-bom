@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+This software is OSI Certified Open Source Software.
+OSI Certified is a certification mark of the Open Source Initiative
+
+The license (Mozilla version 1.0) can be read at the MMBase site.
+See http://www.MMBase.org/license
+Version $Id: pom.xml,v 1.8 2009/02/20 15:21:28 michiel Exp $
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mmbase</groupId>
+  <artifactId>mmbase-bom</artifactId>
+  <version>2.0-SNAPSHOT</version>
+  <name>MMBase2 BOM</name>
+  <packaging>pom</packaging>
+
+  <properties>
+  </properties>
+
+  <description>
+    Bill of Materials
+  </description>
+  <url>http://www.mmbase.org/</url>
+  <inceptionYear>2000</inceptionYear>
+
+  <organization>
+    <name>MMBase.org</name>
+    <url>http://www.mmbase.org</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>Mozilla Public License 1.0 (MPL)</name>
+      <url>http://www.mmbase.org/license</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://scm.mmbase.org/mmbase/trunk</url>
+    <connection>scm:svn:${project.scm.url}</connection>
+    <developerConnection>${project.scm.connection}</developerConnection>
+
+  </scm>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.mmbase</groupId>
+        <artifactId>mmbase-utils</artifactId>
+        <version>2.0.1-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>mmbase-ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>mmbase-ossrh-release</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+</project>
