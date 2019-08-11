@@ -1,0 +1,9 @@
+language: java
+jdk:
+- openjdk8
+script: mvn --fail-never -T 1C -Pdeploy clean test deploy --settings .travis-settings.xml
+  -Dgpg.skip=true
+env:
+  global:
+  - SONATYPE_USER=mihxil
+  - secure: JxIebLQn1G99lBfiRpT2NUxRl4uYY1LRl5CA5A/vc+oGoc2ESyvW/r4XoEnspp1Tn+zl7XlZiq7L6QEXO1kq6vEhnhUwOu3dQNotXPvfpkM1cZaZqBwh5ND0UK2sCzlmUZlQwrwVV4DhNhipixy3Hc7eFGksErh64rqFQbMmS4up+xqYwqRTr9KQKz9G8Q5C/NSzZvDwVxqBjg6we5fey5oL7qHnO+vxSXusF0CE5v8B/FpKa3NNsn5UEK+m8nod1N2/ZG8jfRiiwUD1a0ZQO5UTwlWwQKNGaZQUNy6MAx6xEbvQMsjJHAupgKOiu04zu2sfDon4Qpu6CBPiPy1Ed+QmYjydxJD4aH5ieck5NiUVPbp2E5gIwaP7lq0bY6U1TpfByffP/O1KW+vO3ByEDY4NIfLsqdoR7CCyYPQ5ZY3U3DNLOdZr551j0MKmA8U8aSMsC/W2HKdcHDZ8WTnpv4jjxkY+sbXPnn8x85oFEEn9xyJJXLQlH4SygNJqWK9pu/saWGApcT3jAWo4rs2OuY81ixhKc+6533wANX5tUNv0NECU9AAwntQakM23VHyqLiQatVB6wsNhDHSOxUffdY+/8sqN6d45gDU1yR5Ept/aiwwCBtxxQVarfnmUpIvCUYgtcUzbqOoZjy2KN4EoA0IP45gO+X6hKhHfYnyfMsw=
