@@ -41,7 +41,6 @@ Version $Id: pom.xml,v 1.8 2009/02/20 15:21:28 michiel Exp $
     <url>https://scm.mmbase.org/mmbase/trunk</url>
     <connection>scm:svn:${project.scm.url}</connection>
     <developerConnection>${project.scm.connection}</developerConnection>
-
   </scm>
 
   <dependencyManagement>
@@ -107,6 +106,7 @@ Version $Id: pom.xml,v 1.8 2009/02/20 15:21:28 michiel Exp $
     <profile>
       <id>deploy</id>
       <build>
+        <defaultGoal>deploy</defaultGoal>
         <plugins>
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
