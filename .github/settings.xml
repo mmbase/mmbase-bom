@@ -2,7 +2,7 @@
   <servers>
     <server>
       <id>ossrh</id>
-      <username>michiel</username>
+      <username>mihxil</username>
       <password>${env.OSSRH_PASSWORD}</password>
     </server>
   </servers>
